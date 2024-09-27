@@ -1,0 +1,108 @@
+/* Roadmap Container */
+.roadmap-container {
+    padding: 80px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    font-family: "Poppins", "sans-serif";
+  }
+  
+  .roadmap-title {
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 50px;
+  }
+  
+  /* Timeline Structure */
+  .timeline {
+    position: relative;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .timeline-event {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding: 30px 0;
+  }
+  
+  .timeline-event:nth-child(odd) {
+    justify-content: flex-end;
+  }
+  
+  .timeline-event .event-content {
+    background-color: #fff;
+    padding: 20px 25px;
+    border-radius: 8px;
+    width: 45%;
+    text-align: left;
+    border: 1px solid #1967FF;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .timeline-event h3 {
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 600;
+  }
+  
+  .timeline-event h4 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: 400;
+    color: black;
+  }
+  
+  .timeline-event p {
+    font-size: 1rem;
+    margin-top: 5px;
+    color: black;
+  }
+  
+  /* Timeline Marker */
+  .timeline-event .event-marker {
+    width: 20px;
+    height: 20px;
+    background-color: #1967FF;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    margin-left: -10px;
+  }
+  
+  /* Timeline Vertical Line */
+  .timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: black;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  @media (max-width: 768px) {
+    .timeline-event {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .timeline-event .event-content {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .timeline-event:nth-child(odd) {
+      justify-content: center;
+    }
+  
+    .timeline-event .event-marker {
+      left: 50%;
+      margin-left: -10px;
+    }
+  }
+  

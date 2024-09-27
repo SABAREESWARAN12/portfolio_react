@@ -1,0 +1,113 @@
+/* Work Experience Section Styles */
+.work-container {
+  padding: 80px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+  font-family: "Poppins", "sans-serif";
+}
+
+.work-title {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 50px;
+  font-weight: bolder;
+}
+
+/* Timeline Container */
+.work-timeline {
+  position: relative;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.work-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 30px 0;
+}
+
+/* Alternate items */
+.work-item:nth-child(odd) {
+  justify-content: flex-end;
+}
+
+.work-content {
+  background-color: #fff;
+  padding: 20px 25px;
+  border-radius: 8px;
+  width: 45%;
+  text-align: left;
+  border: 1px solid #1967FF;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.work-content h3 {
+  font-size: 1.5rem;
+  color: black;
+  font-weight: 600;
+}
+
+.work-content h4 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: black;
+  font-weight: 400;
+}
+
+.work-date {
+  font-size: 0.9rem;
+  color: black;
+  margin-top: 5px;
+  display: block;
+}
+
+.work-content p {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: black;
+}
+
+/* Timeline Marker */
+.work-marker {
+  width: 20px;
+  height: 20px;
+  background-color: #1967FF;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  margin-left: -10px;
+}
+
+/* Vertical Line */
+.work-timeline::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: black;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .work-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .work-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .work-marker {
+    left: 50%;
+    margin-left: -10px;
+  }
+}

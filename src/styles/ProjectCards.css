@@ -1,0 +1,49 @@
+.project-cards {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+    font-family: "Poppins", "sans-serif";
+  }
+  
+  .project-title {
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .project-card {
+    background-color: #f4f4f4;
+    border-radius: 12px;
+    padding: 25px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-card-title {
+    font-size: 1.6rem;
+    color: #1967FF;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .project-card-description {
+    font-size: 1rem;
+    color: black;
+  }
+  
