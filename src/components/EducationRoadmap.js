@@ -1,23 +1,21 @@
-import React,{useState, useEffect} from 'react';
+import React from 'react';
 import '../styles/EducationRoadmap.css';
 
 const EducationRoadmap = () => {
-  const [api, update] =useState([]);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('http://13.201.49.150:8080/v1/portfolio/get/Education');
-        if (!response.ok) {
-          throw new Error('Failed to fetch api data');
-        }
-        const data = await response.json();
-        update(data);
-      } catch(err) {
-        console.log(err);
-      }
-    }
-    fetchData();
-  },[]);
+  const api = [{
+    "_id": 1,
+    "year": "2018-2022",
+    "qualification": "Bachelor of Engineering",
+    "institution": "KSR College of Engineering",
+    "_class": "com.sabareeswaran.portfolio.Dto.EducationQualification"
+  },
+  {
+    "_id": 2,
+    "year": "2022-2023",
+    "qualification": "Java FullStack Developer",
+    "institution": "Qspider institution",
+    "_class": "com.sabareeswaran.portfolio.Dto.EducationQualification"
+  }]
   return (
     <section id="about" className="roadmap-container">
       <h2 className="roadmap-title">Education Roadmap</h2>

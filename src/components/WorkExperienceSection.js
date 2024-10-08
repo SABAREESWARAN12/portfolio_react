@@ -1,25 +1,15 @@
-import React,{useState, useEffect} from 'react';
+import React from 'react';
 import '../styles/WorkExperienceSection.css';
 
 const WorkExperienceSection = () => {
-
-  const [workExp, update] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('http://13.201.49.150:8080/v1/portfolio/get/WorkExp');
-        if (!response.ok) {
-          throw new Error('Failed to fetch api data');
-        }
-        const data = await response.json();
-        update(data);
-      } catch(err) {
-        console.log(err);
-      }
-    }
-    fetchData();
-  },[]);
+  const workExp = [{
+    "_id": 1,
+    "role": "Java Developer",
+    "organization": "Bankbazaar.com",
+    "year": "2023-Present",
+    "description": "Expertize in developing the architecture of microservices.  And hands on Experience in Springboot microservice projects",
+    "_class": "com.sabareeswaran.portfolio.Dto.WorkExperience"
+  }];
 
   return (
     <section id="work-experience" className="work-container">

@@ -1,52 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../styles/ProfileBody.css';
+import profileimg from '../assets/profile.png'
 
 const ProfileBody = () => {
-  const [profileContent, setProfile] = useState([]);
-
-
-  useEffect(() => {
-    const fetchProfile = async () => {
-      try {
-        const response = await fetch('http://13.201.49.150:8080/v1/portfolio/get/Profile');
-        if (!response.ok) {
-          
-          throw new Error('Failed to fetch project data');
-        }
-        const data = await response.json();
-        setProfile(data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    fetchProfile();
-  }, []);
-
-  const handleSubmit = async () => {
-    try {
-      const response = await fetch('http://13.201.49.150:8080/v1/portfolio/get/Resume');
-
-      if (!response.ok) {
-        throw new Error('Failed to submit email');
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const profileContent = [{
+    "_id": 1,
+    "title": "Hi I'm Sabareeswaran",
+    "description": "I’m a passionate Java Developer based in the Tamil Nadu India, with a focus on creating beautiful and user-friendly digital experiences. With over 1+ years of experience, I help businesses transform ideas into successful products. I believe in simplicity and inspiration"
+}]
 
   return (
     <section id="profile" className="profile-container">
       <div className="profile-content">
         <div className="profile-image">
-          <img src="http://13.201.49.150:8080/v1/portfolio/get/profileImg" alt="Profile" />
+          <img src={profileimg} alt="Profile" />
         </div>
         {profileContent.map((profileData) => (
           <div className="profile-text" key={profileData.id}>
             <h2 className="profile-title">{profileData.title}</h2>
             <p className="profile-desc">{profileData.description}</p>
-            <a href='http://13.201.49.150:8080/v1/portfolio/get/Resume' download="Resume.pdf">
-            <button className="btn" onClick={handleSubmit} >Get Resume</button>
-            </a>
           </div>
         ))}
       </div>

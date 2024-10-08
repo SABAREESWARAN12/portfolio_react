@@ -1,24 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../styles/SkillsetSection.css';
 
 const SkillsetSection = () => {
-  const [skills, update] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('http://13.201.49.150:8080/v1/portfolio/get/Skills');
-        if (!response.ok) {
-          throw new Error('Failed to fetch api data');
-        }
-        const data = await response.json();
-        update(data);
-      } catch(err) {
-        console.log(err);
-      }
-    }
-    fetchData();
-  },[]);
+  const skills = [
+    {
+      "id":1,
+      "title": "SpringBoot",
+      "description":"To Build an interactive and seamless rest api which communicates with the awfull front-ends"
+    },
+    {
+      "id": 2,
+      "title": "React.js",
+      "description": "To build the responsive and interactive front-end to connect seamless with back ends"
+  },
+  {
+    "id":3,
+    "title": "Jenkins",
+    "description": "To integration an seamless CI/CD pipeline for the projects"
+  },
+  {
+    "id":4,
+    "title": "SQL & mongoDb",
+    "description":"To Ensure the memory of the application to strong as humans so going on with the SQL and No-SQL mongoDb"
+}
+  ]
 
   return (
     <section id="skills" className="skills-container">
