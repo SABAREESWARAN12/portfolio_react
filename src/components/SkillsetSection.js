@@ -6,17 +6,17 @@ const SkillsetSection = () => {
     {
       "id":1,
       "title": "SpringBoot",
-      "description":"To Build an interactive and seamless rest api which communicates with the awfull front-ends"
+      "description":"To build a robust and security fullfilled RESTfull apis for seamless integration between microservices and for front-ends"
     },
     {
       "id": 2,
       "title": "React.js",
-      "description": "To build the responsive and interactive front-end to connect seamless with back ends"
+      "description": "To build a interative and pleasant ui designs to communicate with both apis and viewers"
   },
   {
     "id":3,
     "title": "Jenkins",
-    "description": "To integrate a seamless CI/CD pipeline for the projects"
+    "description": "To ensure the continuous integration and deployment the jenkins take a step ahead"
   },
   {
     "id":4,
