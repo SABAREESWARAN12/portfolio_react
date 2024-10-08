@@ -37,4 +37,11 @@ jobs:
       run: docker build -t sabareeswaran12/ui:latest .
 
     - name: Push Docker image to Docker Hub
-      run: docker push sabareeswaran12/ui:latest
+      run: docker push sabareeswaran12/ui:latest'
+
+    - name: Notify Jenkins if the build passes
+      if: success()
+      run: |
+        curl -X POST http://http://3.108.238.211:8080/github-webhook/ \
+          -H 'Content-Type: application/json' \
+          -d '{"event": "GitHub Action Success", "repository": "your-repo"}'
