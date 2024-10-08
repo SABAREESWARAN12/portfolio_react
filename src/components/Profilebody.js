@@ -10,6 +10,7 @@ const ProfileBody = () => {
       try {
         const response = await fetch('http://13.201.49.150:8080/v1/portfolio/get/Profile');
         if (!response.ok) {
+          
           throw new Error('Failed to fetch project data');
         }
         const data = await response.json();
