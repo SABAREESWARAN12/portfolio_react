@@ -16,7 +16,7 @@ const SkillsetSection = () => {
   {
     "id":3,
     "title": "Jenkins",
-    "description": "To integration an seamless CI/CD pipeline for the projects"
+    "description": "To integration seamless CI/CD pipeline for the projects"
   },
   {
     "id":4,
