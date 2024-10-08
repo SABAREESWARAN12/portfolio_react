@@ -6,7 +6,7 @@ const ProfileBody = () => {
   const profileContent = [{
     "_id": 1,
     "title": "Hi I'm Sabareeswaran",
-    "description": "I’m a passionate Java Developer based in the Tamil Nadu India, with a focus on creating beautiful and user-friendly digital experiences. With over 1+ years of experience, I help businesses transform ideas into successful products. I believe in simplicity and inspiration"
+    "description": "Extensive experience in designing and developing enterprise-level Spring Boot applications and microservices. I am skilled in RESTful API development with security and building highly scalable solutions with Spring Cloud technologies.  Proficient in setting up and maintaining CI/CD pipelines using Jenkins, GitHub Actions, and other automation tools to ensure seamless integration and delivery of code."
 }]
 
   return (
